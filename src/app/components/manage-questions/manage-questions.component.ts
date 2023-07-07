@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Answer } from 'src/app/models/answer.model';
-import { Question } from 'src/app/models/question.model';
-import { UserQuestion } from 'src/app/models/user-question.model';
-import { ObservablesService } from 'src/app/services/observables.service';
+import { Answer } from '../../models/answer.model';
+import { Question } from '../../models/question.model';
+import { UserQuestion } from '../../models/user-question.model';
+import { ObservablesService } from '../../services/observables.service';
 
 @Component({
   selector: 'app-manage-questions',

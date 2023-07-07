@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { UserQuestion } from 'src/app/models/user-question.model';
-import { ObservablesService } from 'src/app/services/observables.service';
+import { UserQuestion } from '../../../models/user-question.model';
+import { ObservablesService } from '../../../services/observables.service';
 
 @Component({
   selector: 'app-responses',

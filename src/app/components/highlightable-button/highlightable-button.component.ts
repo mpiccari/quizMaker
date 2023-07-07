@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Answer } from 'src/app/models/answer.model';
+import { Answer } from '../../models/answer.model';
 
 @Component({
   selector: 'app-highlightable-button',

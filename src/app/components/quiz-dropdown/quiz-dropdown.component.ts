@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { KeyDescription } from 'src/app/models/key-description.model';
+import { KeyDescription } from '../../models/key-description.model';
 
 @Component({
   selector: 'app-quiz-dropdown',

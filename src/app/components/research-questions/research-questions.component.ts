@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Category } from 'src/app/models/category.model';
-import { KeyDescription } from 'src/app/models/key-description.model';
-import { ListCategoriesResponse } from 'src/app/models/list-categories-response.model';
-import { QuestionListResponse } from 'src/app/models/question-list-response.model';
-import { Question } from 'src/app/models/question.model';
-import { QuestionsService } from 'src/app/services/questions.service';
+import { Category } from '../../models/category.model';
+import { KeyDescription } from '../../models/key-description.model';
+import { ListCategoriesResponse } from '../../models/list-categories-response.model';
+import { QuestionListResponse } from '../../models/question-list-response.model';
+import { Question } from '../../models/question.model';
+import { QuestionsService } from '../../services/questions.service';
 
 @Component({
   selector: 'app-research-questions',
