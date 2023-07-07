@@ -1,0 +1,10 @@
+.questionText {
+  font-size: 20px;
+}
+.userAnswersLayout {
+  display: flex;
+  margin-bottom: 30px;
+  .layoutAnswerElement {
+    margin-right: 20px;
+  }
+}

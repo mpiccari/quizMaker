@@ -1,1 +1,8 @@
-<p>responses works!</p>
+<h2 class="resultsLabel">RESULTS</h2>
+<ng-container *ngFor="let question of questionnaire">
+  <app-single-user-answer [userQuestion]="question"></app-single-user-answer>
+</ng-container>
+<app-quiz-result [correctAnswersUser]="correctAnswers"></app-quiz-result>
+<div class="buttonGoBack">
+  <app-confirm-button [text]="'Create a new quiz'" [idElement]="'newQuizBtn'" [clickFunction]="goBack()"></app-confirm-button>
+</div>

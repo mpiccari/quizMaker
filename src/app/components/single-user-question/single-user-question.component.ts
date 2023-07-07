@@ -11,7 +11,6 @@ export class SingleUserQuestionComponent {
   @Input() userQuestion!: UserQuestion;
 
   answerSelected(answer : Answer): void {
-    console.log("dododo");
     if(answer.isSelected) {
       answer.isSelected = false;
     } else {

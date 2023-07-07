@@ -1,2 +1,2 @@
-<app-research-questions (questionList)="getQuestionList($event)" *ngIf="!questionList.length"></app-research-questions>
+<app-research-questions (questionList)="getQuestionList($event)"></app-research-questions>
 <app-manage-questions *ngIf="questionList.length" [list]="questionList"></app-manage-questions>

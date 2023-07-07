@@ -1,0 +1,18 @@
+.userResult {
+  background-color: yellow;
+  min-width: 60%;
+  margin-left: 20%;
+  width: fit-content;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  &.badResult {
+    background-color: red;
+    color: white;
+  }
+  &.goodResult {
+    background-color: green;
+    color: white;
+  }
+}

@@ -12,6 +12,9 @@ import { ConfirmButtonComponent } from './components/confirm-button/confirm-butt
 import { ManageQuestionsComponent } from './components/manage-questions/manage-questions.component';
 import { SingleUserQuestionComponent } from './components/single-user-question/single-user-question.component';
 import { HighlightableButtonComponent } from './components/highlightable-button/highlightable-button.component';
+import { SingleUserAnswerComponent } from './components/single-user-answer/single-user-answer.component';
+import { UserAnswerElementComponent } from './components/user-answer-element/user-answer-element.component';
+import { QuizResultComponent } from './components/quiz-result/quiz-result.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,10 @@ import { HighlightableButtonComponent } from './components/highlightable-button/
     ConfirmButtonComponent,
     ManageQuestionsComponent,
     SingleUserQuestionComponent,
-    HighlightableButtonComponent
+    HighlightableButtonComponent,
+    SingleUserAnswerComponent,
+    UserAnswerElementComponent,
+    QuizResultComponent
   ],
   imports: [
     BrowserModule,

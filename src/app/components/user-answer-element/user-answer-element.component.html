@@ -1,0 +1,5 @@
+<p class="answerElement"
+  [ngClass]="{'error': answer.isSelected && !answer.isCorrect,
+    'correct': answer.isCorrect}"
+  [innerHTML]="answer.text">
+</p>

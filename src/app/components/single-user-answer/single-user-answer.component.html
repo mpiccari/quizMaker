@@ -1,0 +1,7 @@
+<div>
+  <p [innerHTML]="userQuestion.text" class="questionText"></p>
+  <div class="userAnswersLayout">
+    <app-user-answer-element *ngFor="let answerOpt of userQuestion.answers"
+      [answer]="answerOpt" class="layoutAnswerElement"></app-user-answer-element>
+  </div>
+</div>

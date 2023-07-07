@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Answer } from '../../models/answer.model';
 import { Question } from '../../models/question.model';
@@ -10,18 +10,19 @@ import { ObservablesService } from '../../services/observables.service';
   templateUrl: './manage-questions.component.html',
   styleUrls: ['./manage-questions.component.scss']
 })
-export class ManageQuestionsComponent implements OnInit{
-  @Input() list!: Question[];
+export class ManageQuestionsComponent {
+
+  @Input() set list(listValue: Question[]) {
+    this.createQuestionnaire(listValue);
+  }
+
   questionnaire: UserQuestion[] = [];
 
   constructor(private router: Router, private observablesService: ObservablesService) {}
 
-  ngOnInit(): void {
-    this.createQuestionnaire();
-  }
-
-  createQuestionnaire(): void {
-    this.list.forEach((question: Question) => {
+  createQuestionnaire(listValue: Question[]): void {
+    this.questionnaire.splice(0, this.questionnaire.length);
+    listValue.forEach((question: Question) => {
       let answersArray: Answer[] = [];
       this.addAnswer(answersArray, question.correct_answer, true);
       question.incorrect_answers.forEach((incorrectAnswer: string) => {
