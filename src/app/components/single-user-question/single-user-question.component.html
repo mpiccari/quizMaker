@@ -1,0 +1,7 @@
+<div>
+  <p [innerHTML]="userQuestion.text" class="questionText"></p>
+  <div class="userAnswersLayout">
+    <app-highlightable-button *ngFor="let answerOpt of userQuestion.answers"
+      [answer]="answerOpt" class="buttonAnswerComp" (changedAnswer)="answerSelected(answerOpt)"></app-highlightable-button>
+  </div>
+</div>

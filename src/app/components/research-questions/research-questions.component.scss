@@ -1,0 +1,13 @@
+.layout-form-research-questions {
+  display: flex;
+  align-items: flex-end;
+  .select-form-question {
+    width: 40%;
+    margin-right: 20px;
+  }
+}
+.networkErrorMessage {
+  color: red;
+  margin-top: 20px;
+  font-size: 20px;
+}

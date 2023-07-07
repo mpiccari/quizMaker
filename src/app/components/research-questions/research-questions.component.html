@@ -1,0 +1,17 @@
+<div class="layout-form-research-questions">
+
+  <app-quiz-dropdown [idElement]="'categorySelect'" [placeholder]="'Select a category'"
+    [options]="optionsCategory" [fc]="getCategoryFc()" class="select-form-question"
+    [labelDesc]="'Category'"
+  ></app-quiz-dropdown>
+
+  <app-quiz-dropdown [idElement]="'difficultySelect'" [placeholder]="'Select a difficulty'"
+    [options]="optionsDifficulty" [fc]="getDifficultyFc()" class="select-form-question"
+    [labelDesc]="'Difficulty'"
+  ></app-quiz-dropdown>
+
+  <app-confirm-button [idElement]="'createBtn'" [text]="'Create'"
+    [isDisabled]="fgSearchQuestions.invalid" [clickFunction]="getActionButton()"
+  ></app-confirm-button>
+</div>
+<p *ngIf="networkError" class="networkErrorMessage">{{messageNetworkError}}</p>

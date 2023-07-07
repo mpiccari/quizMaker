@@ -1,0 +1,7 @@
+<label [attr.for]="idElement">{{labelDesc}}</label>
+<select [attr.id]="idElement" name="{{idElement}}" [formControl]="fc">
+  <option value="">{{placeholder}}</option>
+  <option *ngFor="let optCatefory of options" value="{{optCatefory.key}}">
+    {{optCatefory.description}}
+  </option>
+</select>

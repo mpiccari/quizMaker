@@ -1,0 +1,11 @@
+button {
+  min-height: 40px;
+  font-size: 20px;
+  width:100%;
+  &:enabled {
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+  }
+}
