@@ -15,6 +15,7 @@ import { HighlightableButtonComponent } from './components/highlightable-button/
 import { SingleUserAnswerComponent } from './components/single-user-answer/single-user-answer.component';
 import { UserAnswerElementComponent } from './components/user-answer-element/user-answer-element.component';
 import { QuizResultComponent } from './components/quiz-result/quiz-result.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { QuizResultComponent } from './components/quiz-result/quiz-result.compon
     HighlightableButtonComponent,
     SingleUserAnswerComponent,
     UserAnswerElementComponent,
-    QuizResultComponent
+    QuizResultComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

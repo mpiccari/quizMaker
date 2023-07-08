@@ -6,6 +6,7 @@ import { ListCategoriesResponse } from '../../models/list-categories-response.mo
 import { QuestionListResponse } from '../../models/question-list-response.model';
 import { Question } from '../../models/question.model';
 import { QuestionsService } from '../../services/questions.service';
+import { ObservablesService } from 'src/app/services/observables.service';
 
 @Component({
   selector: 'app-research-questions',
@@ -32,7 +33,8 @@ export class ResearchQuestionsComponent implements OnInit {
     {key: "hard", description: "Hard"}
   ]
 
-  constructor(private service: QuestionsService) {}
+  constructor(private service: QuestionsService,
+    private observablesService: ObservablesService) {}
 
   ngOnInit(): void {
     this.service.getQuestionCategories().subscribe({
@@ -60,14 +62,17 @@ export class ResearchQuestionsComponent implements OnInit {
     return <FormControl> this.fgSearchQuestions.get(key);
   }
 
-  getActionButton(): () => void {
+  getQuestionnaire(): () => void {
     return () => {
+      this.observablesService.setSubjectSpinner(true);
       this.service.getListQuestions(+this.getCategoryFc().value,
       this.getDifficultyFc().value).subscribe({
         next: (response: QuestionListResponse) => {
+          this.observablesService.setSubjectSpinner(false);
           this.networkError = false;
           this.questionList.emit(response.results);
         }, error: () => {
+          this.observablesService.setSubjectSpinner(false);
           this.messageNetworkError = "Error retrieving the question list";
           this.networkError = true;
         }

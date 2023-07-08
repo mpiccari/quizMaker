@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { UserQuestion } from '../models/user-question.model';
 
 @Injectable({
@@ -7,14 +7,23 @@ import { UserQuestion } from '../models/user-question.model';
 })
 export class ObservablesService {
   private subjectQuestionnaire: BehaviorSubject<UserQuestion[]> = new BehaviorSubject<UserQuestion[]>([]);
+  private subjectSpinner: Subject<boolean> = new Subject<boolean>();
 
   constructor() {}
 
-  getSubjectQuestionnaire(): Observable<UserQuestion[]> {
+  getObservableQuestionnaire(): Observable<UserQuestion[]> {
     return this.subjectQuestionnaire.asObservable();
   }
 
   setSubjectQuestionnaire(questionnaire: UserQuestion[]): void {
     this.subjectQuestionnaire.next(questionnaire);
+  }
+
+  getObservableSpinner(): Observable<boolean> {
+    return this.subjectSpinner.asObservable();
+  }
+
+  setSubjectSpinner(showSpinner: boolean): void {
+    this.subjectSpinner.next(showSpinner);
   }
 }

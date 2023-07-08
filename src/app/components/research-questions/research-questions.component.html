@@ -11,7 +11,7 @@
   ></app-quiz-dropdown>
 
   <app-confirm-button [idElement]="'createBtn'" [text]="'Create'"
-    [isDisabled]="fgSearchQuestions.invalid" [clickFunction]="getActionButton()"
+    [isDisabled]="fgSearchQuestions.invalid" [clickFunction]="getQuestionnaire()"
   ></app-confirm-button>
 </div>
 <p *ngIf="networkError" class="networkErrorMessage">{{messageNetworkError}}</p>

@@ -16,7 +16,7 @@ export class ResponsesComponent implements OnInit, OnDestroy {
   constructor(private observablesService: ObservablesService, private router: Router) {}
 
   ngOnInit(): void {
-    this.subscriptionQuestionnaire = this.observablesService.getSubjectQuestionnaire()
+    this.subscriptionQuestionnaire = this.observablesService.getObservableQuestionnaire()
     .subscribe(savedQuestionnaire => {
       this.questionnaire = savedQuestionnaire;
         if(!this.questionnaire?.length) {
@@ -28,7 +28,6 @@ export class ResponsesComponent implements OnInit, OnDestroy {
               this.correctAnswers++;
             }
           });
-          console.log("correct answers: " + this.correctAnswers);
         }
       }
     )
@@ -41,6 +40,6 @@ export class ResponsesComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-      this.subscriptionQuestionnaire.unsubscribe();
+    this.subscriptionQuestionnaire.unsubscribe();
   }
 }
