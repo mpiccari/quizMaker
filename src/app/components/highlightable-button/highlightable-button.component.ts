@@ -10,7 +10,7 @@ export class HighlightableButtonComponent {
   @Input() answer!: Answer;
   @Output() changedAnswer: EventEmitter<void> = new EventEmitter<void>();
 
-  clicked() {
+  clicked(): void {
     this.changedAnswer.emit();
   }
 }

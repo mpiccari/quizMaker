@@ -10,4 +10,5 @@ export class ConfirmButtonComponent {
   @Input() clickFunction!: () => void;
   @Input() isDisabled: boolean = false;
   @Input() text!: string;
+  @Input() typeButton: string = "button";
 }

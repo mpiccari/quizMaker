@@ -8,7 +8,8 @@ import { Question } from '../../../models/question.model';
 })
 export class QuestionsComponent {
   questionList: Question[] = [];
-  getQuestionList(questionList: Question[]) {
+
+  getQuestionList(questionList: Question[]): void {
     this.questionList = questionList;
   }
 }

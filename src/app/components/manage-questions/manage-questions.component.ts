@@ -50,10 +50,8 @@ export class ManageQuestionsComponent {
     return answers.find(answer => answer.isSelected) ? true : false;
   }
 
-  submitted(): () => void {
-    return () => {
-      this.observablesService.setSubjectQuestionnaire(this.questionnaire);
-      this.router.navigate(['/responses']);
-    }
+  onSubmit(): void {
+    this.observablesService.setSubjectQuestionnaire(this.questionnaire);
+    this.router.navigate(['/responses']);
   }
 }

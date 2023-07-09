@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { UserQuestion } from 'src/app/models/user-question.model';
+import { UserQuestion } from '../../models/user-question.model';
 
 @Component({
   selector: 'app-single-user-answer',

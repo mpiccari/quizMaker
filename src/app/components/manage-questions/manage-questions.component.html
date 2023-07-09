@@ -1,6 +1,8 @@
-<ng-container *ngFor="let question of questionnaire">
-  <app-single-user-question [userQuestion]="question"></app-single-user-question>
-</ng-container>
-<div class="submitAnswersLayout" *ngIf="isQuestionnaireComplete()">
-  <app-confirm-button [text]="'Submit'" [idElement]="'submitUserAnswersButton'" [clickFunction]="submitted()"></app-confirm-button>
-</div>
+<form #quizForm="ngForm" (ngSubmit)="onSubmit()">
+  <ng-container *ngFor="let question of questionnaire">
+    <app-single-user-question [userQuestion]="question"></app-single-user-question>
+  </ng-container>
+  <div class="submitAnswersLayout" *ngIf="isQuestionnaireComplete()">
+    <app-confirm-button [text]="'Submit'" [idElement]="'submitUserAnswersButton'" [typeButton]="'submit'"></app-confirm-button>
+  </div>
+</form>

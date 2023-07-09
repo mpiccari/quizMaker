@@ -1,2 +1,2 @@
-<button [attr.id]="idElement" (click)="clickFunction()"
-  [disabled]="isDisabled">{{text}}</button>
+<button [attr.id]="idElement" (click)="typeButton == 'button' ? clickFunction() : undefined"
+  [disabled]="isDisabled" [attr.type]="typeButton">{{text}}</button>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Category } from '../../models/category.model';
 import { KeyDescription } from '../../models/key-description.model';
@@ -6,7 +6,7 @@ import { ListCategoriesResponse } from '../../models/list-categories-response.mo
 import { QuestionListResponse } from '../../models/question-list-response.model';
 import { Question } from '../../models/question.model';
 import { QuestionsService } from '../../services/questions.service';
-import { ObservablesService } from 'src/app/services/observables.service';
+import { ObservablesService } from '../../services/observables.service';
 
 @Component({
   selector: 'app-research-questions',
